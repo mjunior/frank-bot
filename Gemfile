@@ -1,4 +1,4 @@
-souce :rubygems
+source :rubygems
 
 gem 'sinatra'
 gem 'activerecord'
