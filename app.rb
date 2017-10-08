@@ -1,6 +1,7 @@
 require 'json'
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'byebug'
 
 require './config/database'
 

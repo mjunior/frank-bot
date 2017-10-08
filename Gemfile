@@ -5,6 +5,8 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'pg'
 gem 'rake'
+gem 'byebug'
+gem 'pg_search'
 
 group :development do
   gem "tux"
