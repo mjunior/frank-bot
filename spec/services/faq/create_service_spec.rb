@@ -4,14 +4,15 @@ describe FaqModule::CreateService do
   before do
     @company = create(:company)
 
-    @question = FFaker::Lorem.setence
-    @answer = FFaker::Lorem.setence
+    @question = FFaker::Lorem.sentence
+    @answer = FFaker::Lorem.sentence
     @hashtags = "#{FFaker::Lorem.word}, #{FFaker::Lorem.word}"
   end
 
 
   describe '#call' do
     it 'Without hashtag params, will receive a error' do
+     
       @createService = FaqModule::CreateService.new({"question-original" => @question, "answer-original" => @answer})
         
       response = @createService.call()
