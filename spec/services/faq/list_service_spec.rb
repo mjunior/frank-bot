@@ -16,8 +16,8 @@ describe FaqModule::ListService do
     it 'With list comand: With two faqs, find questions and answer in responde' do
       @listService = FaqModule::ListService.new({}, 'list')
 
-      fa1 = create(:faq, company: @company)
-      fa2 = create(:faq, company: @company)
+      faq1 = create(:faq, company: @company)
+      faq2 = create(:faq, company: @company)
       
       response = @listService.call()
       expect(response).to match(faq1.question)
@@ -36,7 +36,7 @@ describe FaqModule::ListService do
 
     it 'With search command: With valid query' do
       faq = create(:faq, company: @company)
-
+  
       @listService = FaqModule::ListService.new({query: faq.question.split(" ").sample}, 'search')
       response = @listService.call();
 
@@ -52,7 +52,7 @@ describe FaqModule::ListService do
     end
 
     it 'With search_by_hashtag: With valid hashtag' do
-      faq = created(:faq, company: @company)
+      faq = create(:faq, company: @company)
       hashtag = create(:hashtag, company: @company)
       create(:faq_hashtag, faq: faq, hashtag: hashtag)
 

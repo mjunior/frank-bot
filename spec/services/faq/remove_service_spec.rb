@@ -1,3 +1,5 @@
+require_relative './../../spec_helper.rb'
+
 describe FaqModule::RemoveService do
   before do
     @company = create(:company)
