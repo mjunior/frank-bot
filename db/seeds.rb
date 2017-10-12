@@ -1,0 +1,1 @@
+Company.create name: 'FrankBot'
