@@ -36,12 +36,13 @@ module FaqModule
 
     def call_frank query
       response = FrankResearcher.search(query)
+      return response
       answer = "*Encontrei estes links na internet* \n\n"
       response[:items].each do |item|
         answer += "*#{item[:title]}*\n"
         answer += ">#{item[:link]}\n"
       end
-      answer += "\n -Powered by: google- "
+      answer += "\n -#{query}- "
     end
   end
 end

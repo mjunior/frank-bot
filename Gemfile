@@ -7,7 +7,7 @@ gem 'pg'
 gem 'rake'
 gem 'byebug'
 gem 'pg_search'
-gem 'frank_researcher', '~> 0.1.3'
+gem 'frank_researcher', '~> 0.1.4'
 
 group :development do
   gem "tux"
