@@ -31,7 +31,17 @@ module FaqModule
         end
         response += "\n\n"
       end
-      (faqs.count > 0) ? response : "Nada encontrado"
+      (faqs.count > 0) ? response : call_frank(@query)
+    end
+
+    def call_frank query
+      response = FrankResearcher.search(query)
+      answer = "*Encontrei estes links na internet* \n\n"
+      response[:items].each do |item|
+        answer += "*#{item[:title]}*"
+        answer += "     #{item[:link]} \n *"
+      end
+      answer += "\n -- "
     end
   end
 end
