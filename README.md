@@ -21,9 +21,12 @@ FrankBot é um bot capaz de cadastrar e buscar perguntas frequentes de um time n
 ### - Buscando por uma #hashtag
 ![alt text](./imgs/frank5.png)
 
+### - Quando uma pergunta não é encontrada é feita uma busca no google com a gem [FrankResearcher](https://github.com/mjunior/frank-researcher)
+![alt text](./imgs/frank6.png)
+
+
 
 ## TODO
 - Possibilitar cadastro de vários times (Individual Companies)
-- Quando não encontrar em sua base de dados buscar no Wikipedia
 - Monitorar conversas em canais
 - Adicionar sistema de triggers para customizações diversas
