@@ -38,10 +38,10 @@ module FaqModule
       response = FrankResearcher.search(query)
       answer = "*Encontrei estes links na internet* \n\n"
       response[:items].each do |item|
-        answer += "*#{item[:title]}*"
-        answer += "     #{item[:link]} \n *"
+        answer += "*#{item[:title]}*\n"
+        answer += ">#{item[:link]}\n"
       end
-      answer += "\n -- "
+      answer += "\n -Powered by: google- "
     end
   end
 end
